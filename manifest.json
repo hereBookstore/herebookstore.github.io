@@ -1,15 +1,27 @@
 {
-  "name": "一行十文化",
+  "name": "一行十文化 - 数字赋能文化传承",
   "short_name": "一行十",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0e5073",
   "theme_color": "#0e5073",
+  "description": "以数字技术赋能中华文化传承与创新，打造沉浸式文化体验新范式。",
+  "orientation": "any",
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "16x16",
       "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "服务介绍",
+      "url": "/#services"
+    },
+    {
+      "name": "联系我们",
+      "url": "/#we"
     }
   ]
 }

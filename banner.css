@@ -1,0 +1,76 @@
+/* 横幅样式 */
+.banner {
+    height: 600px;
+    background:
+        linear-gradient(rgba(26, 58, 90, 0.8), rgba(26, 58, 90, 0.9)),
+        url("https://6865-herebookstore-6g84xp2kfd9db564-1332688787.tcb.qcloud.la/official/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10%;
+    position: relative;
+    overflow: hidden;
+    filter: saturate(1.1) brightness(0.95);
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(60deg, rgba(26, 58, 90, 0.9) 0%, rgba(14, 80, 115, 0.8) 100%);
+    z-index: 1;
+}
+
+.banner article {
+    position: relative;
+    z-index: 2;
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.banner h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-shadow: var(--text-shadow);
+    letter-spacing: 0.5px;
+}
+
+.banner p {
+    font-size: 18px;
+    max-width: 800px;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+}
