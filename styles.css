@@ -9,6 +9,10 @@
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --hover-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --gradient-primary: linear-gradient(135deg, #0e5073 0%, #1a3a5a 100%);
+  --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  --glow: 0 0 10px rgba(120, 192, 212, 0.3);
 }
 
 /* 提示：生产环境建议使用压缩版CSS以提高加载速度 */
@@ -38,6 +42,11 @@ header {
   z-index: 1000;
   backdrop-filter: blur(8px);
   box-shadow: var(--shadow);
+}
+
+/* 优化 header：增加悬停时轻微缩放 */
+header:hover {
+  transform: scale(1.02);
 }
 
 /* 针对移动端响应式调整 */
@@ -80,6 +89,29 @@ a:hover::after {
   width: 100%;
 }
 
+nav a {
+  letter-spacing: 0.5px;
+  padding: 5px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: -100%;
+  background: var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+nav a:hover::before {
+  left: 0;
+  box-shadow: var(--glow);
+}
+
 nav a:hover {
   color: var(--accent-color);
   transition: color 0.3s ease;
@@ -108,9 +140,7 @@ nav a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg,
-      rgba(26, 58, 90, 0.9),
-      rgba(14, 80, 115, 0.8));
+  background: linear-gradient(60deg, rgba(26, 58, 90, 0.9) 0%, rgba(14, 80, 115, 0.8) 100%);
   z-index: 1;
 }
 
@@ -130,6 +160,22 @@ nav a:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main {
+  animation: fadeIn 0.8s ease-out;
 }
 
 .banner h2 {
@@ -169,12 +215,17 @@ nav a:hover {
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(4px);
   box-shadow: var(--shadow);
+  background: rgba(26, 58, 90, 0.95);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .service-item:hover {
   transform: translateY(-8px);
   box-shadow: var(--hover-shadow);
   border-color: var(--accent-color);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: var(--card-shadow);
 }
 
 .service-item h3 {
@@ -182,6 +233,7 @@ nav a:hover {
   margin-bottom: 15px;
   position: relative;
   padding-bottom: 15px;
+  letter-spacing: 1px;
 }
 
 .service-item h3::after {
@@ -250,11 +302,15 @@ nav a:hover {
   border-radius: 10px;
   transition: var(--transition);
   box-shadow: var(--shadow);
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease;
 }
 
 .qr-code img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) rotate(1deg);
   box-shadow: var(--hover-shadow);
+  transform: scale(1.05) translateY(-5px);
+  filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.3));
 }
 
 .qr-code figcaption {
@@ -265,8 +321,24 @@ nav a:hover {
 
 footer {
   background-color: var(--primary-bg);
-  padding: 40px 10%;
+  padding: 50px 10%;
   text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent);
 }
 
 footer p {
