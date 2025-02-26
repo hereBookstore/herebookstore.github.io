@@ -1,5 +1,5 @@
 // --- 缓存配置 ---
-const CACHE_NAME = "site-cache-v6";
+const CACHE_NAME = "one2ten-cache-v7";
 const URLS_TO_CACHE = [
   "/",
   "/index.html",
