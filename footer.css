@@ -1,24 +1,10 @@
 /* 页脚样式 */
 footer {
-    background-color: var(--primary-bg);
     padding: 50px 10%;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     position: relative;
     overflow: hidden;
-}
-
-footer::before {
-    content: '';
-    position: absolute;
-    top: 1px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg,
-            transparent,
-            rgba(255, 255, 255, 0.3),
-            transparent);
 }
 
 footer p {

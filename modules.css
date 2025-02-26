@@ -1,62 +1,62 @@
 /* 其他模块样式 */
 .me-container {
-    background-color: var(--primary-bg);
-    display: flex;
-    gap: 10px;
-    padding: 20px 10%;
-    flex-wrap: wrap;
+  background-color: var(--primary-bg);
+  display: flex;
+  gap: 10px;
+  padding: 20px 10%;
+  flex-wrap: wrap;
 }
 
 .module {
-    background-color: var(--header-bg);
-    flex: 1;
-    min-width: 300px;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: var(--transition-normal);
-    backdrop-filter: blur(10px);
+  background-color: var(--header-bg);
+  flex: 1;
+  min-width: 300px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition-normal);
+  backdrop-filter: blur(10px);
 }
 
 .module:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--hover-shadow);
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
 }
 
 .module h2 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .qr-code-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
 }
 
 .qr-code {
-    text-align: center;
+  text-align: center;
 }
 
 .qr-code img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: var(--transition-normal);
-    box-shadow: var(--shadow);
-    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
-    transition: all 0.3s ease;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: var(--transition-normal);
+  box-shadow: var(--shadow);
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease;
 }
 
 .qr-code img:hover {
-    transform: scale(1.08) translateY(-8px);
-    box-shadow: var(--hover-shadow);
-    filter: brightness(1.05);
+  transform: scale(1.08) translateY(-8px);
+  box-shadow: var(--hover-shadow);
+  filter: brightness(1.05);
 }
 
 .qr-code figcaption {
-    font-size: 14px;
-    color: #666;
-    margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
 }

@@ -1,27 +1,7 @@
 /* 主样式文件，用于引入其他模块 */
-@import 'base.css';
-@import 'header.css';
-@import 'banner.css';
-@import 'services.css';
-@import 'modules.css';
-@import 'footer.css';
-/* 可以根据需要添加更多模块 */
-
-:root {
-  /* 优化现有颜色系统 */
-  --primary-bg: #0e5073;
-  --header-bg: #1a3a5a;
-  --text-color: #ffffff;
-  --accent-color: #78c0d4;
-  --secondary-text: #cccccc;
-
-  /* 增强阴影效果 */
-  --shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  --hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  --text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-
-  /* 优化过渡动画 */
-  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
+@import "base.css";
+@import "header.css";
+@import "banner.css";
+@import "services.css";
+@import "modules.css";
+@import "footer.css";
