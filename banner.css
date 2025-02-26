@@ -1,65 +1,64 @@
 /* 横幅样式 */
 .banner {
-    height: 600px;
-    background:
-        linear-gradient(rgba(26, 58, 90, 0.8), rgba(26, 58, 90, 0.9)),
-        url("https://6865-herebookstore-6g84xp2kfd9db564-1332688787.tcb.qcloud.la/official/bg.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 0 10%;
-    position: relative;
-    overflow: hidden;
-    filter: saturate(1.1) brightness(0.95);
+  height: 600px;
+  background: linear-gradient(rgba(26, 58, 90, 0.8), rgba(26, 58, 90, 0.9)),
+    url("https://6865-herebookstore-6g84xp2kfd9db564-1332688787.tcb.qcloud.la/official/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 10%;
+  position: relative;
+  overflow: hidden;
+  filter: saturate(1.1) brightness(0.95);
 }
 
 .banner article {
-    position: relative;
-    z-index: 2;
-    animation: fadeInUp 1s ease-out;
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1s ease-out;
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 main {
-    animation: fadeIn 0.8s ease-out;
+  animation: fadeIn 0.8s ease-out;
 }
 
 .banner h2 {
-    font-size: 40px;
-    margin-bottom: 30px;
-    text-shadow: var(--text-shadow);
-    letter-spacing: 0.5px;
+  font-size: 40px;
+  margin-bottom: 30px;
+  text-shadow: var(--text-shadow);
+  letter-spacing: 0.5px;
 }
 
 .banner p {
-    font-size: 18px;
-    max-width: 800px;
-    line-height: 1.8;
-    letter-spacing: 0.3px;
+  font-size: 18px;
+  max-width: 800px;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
 }

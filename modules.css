@@ -28,6 +28,11 @@
   margin-bottom: 20px;
 }
 
+.detail {
+  text-decoration: underline;
+  font-size: 14px;
+}
+
 .qr-code-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
